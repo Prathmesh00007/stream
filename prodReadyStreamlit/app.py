@@ -137,7 +137,7 @@ for candidate in MODEL_CHECKPOINTS:
     if os.path.exists(candidate):
         model = YOLO(candidate)
         # Explicitly set class names to avoid COCO errors
-        model.names = {
+        model.model.names = {
             0: "OxygenTank", 1: "NitrogenTank", 2: "FirstAidBox",
             3: "FireAlarm", 4: "SafetySwitchPanel", 5: "EmergencyPhone",
             6: "FireExtinguisher",
