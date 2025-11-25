@@ -26,7 +26,7 @@ st.sidebar.info(
 )
 
 # --- Hero Section ---
-st.title("🚀 Space Station Safety Intelligence")
+st.title("CodeOfDuty Submission - Avg mAP@50 = 85")
 st.markdown("### YOLO11M object detection for seven critical safety assets")
 
 st.markdown(
