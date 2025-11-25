@@ -1,6 +1,6 @@
 ## 📝 Description
 
-CodeOfDuty Submission. We were tasked to create a robust system which can detect 7 space safety equipments in low-light conditions. We have fine-tuned and hypertuned YOLOv 11M model to achieve highest mAP@50 =  90 and average mAP@50 = 85
+CodeOfDuty Submission. We were tasked to create a robust system which can detect 7 space safety equipments in low-light conditions. We have fine-tuned and hypertuned YOLOv 11M model to achieve **highest mAP@50 =  90** and **average mAP@50 = 85**
 
 ## 🛠️ Tech Stack
 
