@@ -7,7 +7,7 @@ from ultralytics import YOLO
 import streamlit as st
 
 # --- Page Config ---
-st.set_page_config(page_title="Space Safety Intelligence Console", layout="wide")
+st.set_page_config(page_title="CodeOfDuty Submission - Avg mAP@50 = 85", layout="wide")
 
 # --- Sidebar Narrative ---
 st.sidebar.title("📡 Falcon Digital Link")
