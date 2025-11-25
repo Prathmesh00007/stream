@@ -84,7 +84,7 @@ Pillow: latest
    - Windows: `venv\Scripts\activate`
    - Unix/MacOS: `source venv/bin/activate`
 4. Install dependencies: `pip install -r requirements.txt`
-5. Run: streamlit run app.py
+5. Run: 'streamlit run app.py'
 
 ## 👥 Contributing
 
