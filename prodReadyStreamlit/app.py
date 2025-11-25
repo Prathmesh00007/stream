@@ -51,10 +51,11 @@ col_latency.metric("Avg Inference (CPU)", "~0.8s / frame")
 st.divider()
 
 # --- Model Loader ---
-MODEL_CHECKPOINTS: List[str] = [
-    "AVS325_Submission/SpaceSafety_Model/weights/best.pt",  # YOUR trained weights first priority
-    "AVS325_Submission/SpaceSafety_Model3/weights/best.pt",
-    "yolo11m.pt",  # fallback (avoid if you want custom classes)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_CHECKPOINTS = [
+    os.path.join(BASE_DIR, "AVS325_Submission/SpaceSafety_Model/weights/best.pt"),
+    os.path.join(BASE_DIR, "AVS325_Submission/SpaceSafety_Model3/weights/best.pt"),
+    os.path.join(BASE_DIR, "yolo11m.pt"),
 ]
 
 model = None
