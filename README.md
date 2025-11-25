@@ -1,106 +1,103 @@
+## 📝 Description
 
-```markdown
-# CodeOfDuty Submission - Space Safety Intelligence Console
-# We have achieved highest mAP@50=90 and average mAP@50=85
+CodeOfDuty Submission. We were tasked to create a robust system which can detect 7 space safety equipments in low-light conditions. We have fine-tuned and hypertuned YOLOv 11M model to achieve highest mAP@50 =  90 and average mAP@50 = 85
 
-A Streamlit-based application for autonomous perception in high-stakes environments such as space stations.  
-This project leverages **YOLO11M** object detection to monitor seven critical safety assets.
+## 🛠️ Tech Stack
 
----
+- Python
+- Ultralytics
+- PyTorch
+- Stramlit
+- YOLOv 11M
+- OpenCV
+- Falcon Digital Twin Platform
 
-## 📂 Project Structure
+
+## 📦 Key Dependencies
+
+```
+streamlit: 1.51.0
+ultralytics: 8.3.232
+torch: 2.0.0
+torchvision: 0.15.0
+pandas: latest
+numpy: latest
+opencv-python-headless: latest
+Pillow: latest
+```
+
+## 📁 Project Structure
 
 ```
 .
-├── app.py                          # Main Streamlit application
-├── requirements.txt                # Python dependencies
-└── AVS325_Submission/
-    └── SpaceSafety_Model/
-        └── weights/
-            └── best.pt             # Custom trained YOLO weights
+├── .devcontainer
+│   └── devcontainer.json
+├── packages.txt
+└── prodReadyStreamlit
+    ├── AVS325_Submission
+    │   ├── SpaceSafety_Model
+    │   │   ├── args.yaml
+    │   │   └── labels.jpg
+    │   ├── SpaceSafety_Model2
+    │   │   ├── args.yaml
+    │   │   ├── labels.jpg
+    │   │   ├── train_batch0.jpg
+    │   │   └── train_batch1.jpg
+    │   └── SpaceSafety_Model3
+    │       ├── BoxF1_curve.png
+    │       ├── BoxPR_curve.png
+    │       ├── BoxP_curve.png
+    │       ├── BoxR_curve.png
+    │       ├── args.yaml
+    │       ├── confusion_matrix.png
+    │       ├── confusion_matrix_normalized.png
+    │       ├── labels.jpg
+    │       ├── results.csv
+    │       ├── results.png
+    │       ├── train_batch0.jpg
+    │       ├── train_batch1.jpg
+    │       ├── train_batch2.jpg
+    │       ├── train_batch37570.jpg
+    │       ├── train_batch37571.jpg
+    │       ├── train_batch37572.jpg
+    │       ├── val_batch0_labels.jpg
+    │       ├── val_batch0_pred.jpg
+    │       ├── val_batch1_labels.jpg
+    │       ├── val_batch1_pred.jpg
+    │       ├── val_batch2_labels.jpg
+    │       ├── val_batch2_pred.jpg
+    │       └── weights
+    │           ├── best.pt
+    │           └── last.pt
+    ├── app.py
+    ├── requirements.txt
+    ├── train_model.py
+    └── yolo11m.pt
 ```
 
----
+## 🛠️ Development Setup
 
-## ⚙️ Setup Instructions
+### Python Setup
+1. Install Python (v3.8+ recommended)
+2. Create a virtual environment: `python -m venv venv`
+3. Activate the environment:
+   - Windows: `venv\Scripts\activate`
+   - Unix/MacOS: `source venv/bin/activate`
+4. Install dependencies: `pip install -r requirements.txt`
+5. Run: streamlit run app.py
 
-Follow these steps to get the project running locally:
+## 👥 Contributing
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
-```
+Contributions are welcome! Here's how you can help:
 
-### 2. Create and activate a virtual environment (recommended)
-```bash
-python -m venv venv
-source venv/bin/activate   # On macOS/Linux
-venv\Scripts\activate      # On Windows
-```
+1. **Fork** the repository
+2. **Clone** your fork: `git clone https://github.com/Prathmesh00007/stream.git`
+3. **Create** a new branch: `git checkout -b feature/your-feature`
+4. **Commit** your changes: `git commit -am 'Add some feature'`
+5. **Push** to your branch: `git push origin feature/your-feature`
+6. **Open** a pull request
 
-### 3. Install dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Run the Streamlit app
-```bash
-streamlit run app.py
-```
+Please ensure your code follows the project's style guidelines and includes tests where applicable.
 
 ---
-
-## 🧩 Requirements
-
-- Python 3.9+  
-- Streamlit  
-- Ultralytics YOLO  
-- Pillow  
-- Pandas  
-
-All dependencies are listed in `requirements.txt`.
-
----
-
-## 🛰️ Usage
-
-1. Launch the app with `streamlit run app.py`.  
-2. Upload a CCTV frame or synthetic render (`.jpg`, `.jpeg`, `.png`).  
-3. The app will:
-   - Run YOLO11M inference using your trained weights (`best.pt`).  
-   - Display detection overlays.  
-   - Report confidence scores for seven critical safety assets:
-     - OxygenTank  
-     - NitrogenTank  
-     - FirstAidBox  
-     - FireAlarm  
-     - SafetySwitchPanel  
-     - EmergencyPhone  
-     - FireExtinguisher  
-
----
-
-## ⚠️ Notes
-
-- Ensure your trained weights (`best.pt`) are present in:
-  ```
-  ./AVS325_Submission/SpaceSafety_Model/weights/best.pt
-  ```
-- If weights are missing, the app will fall back to default YOLO weights or show an error.  
-- For large weight files (>100 MB), consider using [Git LFS](https://git-lfs.github.com/) or hosting them externally (e.g., Hugging Face Hub).
-
----
-
-## 📡 Demo Objective
-
-This console demonstrates how synthetic data from a Falcon Digital Twin can be used to train robust YOLO detectors for real-world deployment in space safety monitoring.
-
----
-```
-
----
-
-✨ This README is structured to be **developer-friendly** and **demo-ready**. It covers cloning, installing, running, and troubleshooting.  
-
-Do you want me to also add a **section for deployment on Streamlit Cloud** (with instructions for handling large weight files via Git LFS or Hugging Face Hub)? That would make it easier for others to reproduce your hosted demo.
+*This README was generated with ❤️ by ReadmeBuddy*
